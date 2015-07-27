@@ -1,0 +1,2 @@
+class DoortagController < ApplicationController
+end

@@ -1,0 +1,26 @@
+%h1#headerTo Listing posts
+
+%table
+  %thead
+    %tr
+      %th User
+      %th Message
+      %th Parent
+      %th
+      %th
+      %th
+
+  %tbody
+    - @posts.each do |post|
+      %tr
+        %td= post.user_id
+        %td= post.message
+        %td= post.parent
+        %td= link_to 'Show', post
+        %td= link_to 'Edit', edit_post_path(post)
+        %td= link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td
+
+%br
+
+= link_to 'New Post', new_post_path

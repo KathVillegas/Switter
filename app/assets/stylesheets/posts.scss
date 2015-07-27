@@ -1,0 +1,123 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container-fluid{
+ 	background-color: #CA278C;
+}
+ .nav{
+ 	padding-right: 2%;
+}
+ li{
+ 	font-size: 20px;
+ } 
+ .navbar-inverse .navbar-nav>li>a {
+	color: white !important;
+}
+navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+	color: white;
+	font-weight: bolder !important;
+	background-color: #E47297 !important;
+}
+
+ #switterImg{
+ 	height: 50px;
+ }
+.bodyDiv{
+ 	padding-top: 60px;
+ 	/*background-image: url('cupcakes3.jpg');*/
+ }
+ #userName{
+ 	font-size: 60px;
+ }
+
+ #sweetSection{ 	
+ 	border-left:solid thin black;
+ 	border-right:solid thin black;	
+ 	background-color: white;
+}
+#userDiv{
+	border: solid thin black;
+	border-radius: 10px;
+	padding: 1% 5% 5% 5%;
+	background-color: white;
+}
+
+.imgCandy{
+	width: 20%;
+	height: 20%;
+}
+#postDiv{
+	width: 95%;
+	margin: auto;
+	margin-bottom: 1%;
+	border: solid thin #E47297;
+}
+.follow{
+	border-left: solid thin black;
+}
+#cupcake5{
+	width: 40px;
+	vertical-align: baseline;
+	/*border: solid thin black;*/
+}
+#postTextboxDiv{
+	padding: 1%;
+
+}
+textarea.form-control{
+	resize:none;
+	height: 90px !important;
+}
+#buttonSubmit{
+	/*float: left;*/
+	/*width: 20%;*/
+	font-size: 20px;
+	text-align: right;
+}
+#counter{
+	padding-top: 1%;
+	padding-right: 1%;
+	/*width: 80%;*/
+	/*float: left;*/
+	text-align: right;
+
+}
+#sweetsDiv{
+	margin-top: 5%;
+}
+hr{
+	color: black;
+}
+#usernameDiv{
+	font-size: 30px;
+	font-weight: bolder;
+}
+#postDiv{
+	padding: 3%;
+	border-radius: 10px;
+}
+#messageDiv{
+	font-size: 40px;
+	padding: 1%;
+}
+#tallies{
+	height: 15%;
+	margin-top: 2%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	margin-bottom: 2%;
+	border-bottom: solid thin #ccc;
+	border-top: solid thin #ccc;
+}
+#actionDiv{
+	height: 5%;
+}
+.lists{
+	border-top: solid thin black;
+	margin-top: 1%;
+	margin-right: 3%;
+	padding-left: 3% !important;
+	padding: 1%;
+	font-style: italic;
+}

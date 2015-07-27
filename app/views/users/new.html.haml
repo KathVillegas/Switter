@@ -1,0 +1,27 @@
+#bodyDivision
+	- if flash.any?
+		%div.alert.alert-danger.alertDiv
+			- flash.each do |key, value|
+				%strong
+					= value
+
+
+
+	%div#signInDiv
+		= form_tag '/users/attempt_login' do
+			= field_set_tag do
+				.form-group
+					= label_tag :username_login, 'Username:'
+					= text_field_tag :username, nil, class:'form-control'
+				.form-group
+					= label_tag :password_login, 'Password:'
+					= password_field_tag :password, nil, class:'form-control'
+				
+				= submit_tag 'Log In', class:"btn btn-success", id:"signInButton"
+
+	= render 'form'
+
+	/ %div#switterImg2
+	/ 	=image_tag "switter2.png", id: "switter2Img"
+
+

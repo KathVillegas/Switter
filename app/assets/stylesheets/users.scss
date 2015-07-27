@@ -1,0 +1,64 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#signUpDiv{
+	border: solid thin black;
+	border-radius: 20px;
+	padding: 2% 2% 2% 2% ;
+	width: 30%;
+	height: 300px;
+	float: right;
+	margin-right: 10%;
+	position: relative;
+	clear: both;
+	margin-top: 2%;
+	background-color: white;
+}
+#changePassword{
+	border: solid thin black;
+	border-radius: 20px;
+	padding: 2% 2% 2% 2% ;
+	position: relative;
+	height: 300px;
+	width: 30%;
+	margin: auto;
+	background-color: white;
+	margin-top: 10%;
+}
+#changePasswordButton{
+	position: absolute;
+	font-weight: bolder;
+	float: right;	
+}
+#signUpButton, #signInButton{
+	font-weight: bolder;
+	float: right;
+}
+
+#signInDiv{
+	border: solid thin black;
+	border-radius: 20px;
+	padding: 2% 2% 2% 2% ;
+	width: 30%;
+	height: 15%;
+	float: right;
+	margin-right: 10%;
+	clear: both;
+	margin-top: 2%;
+	background-color: white;
+}
+
+.alertDiv{
+	width: 50%;
+	margin: auto;
+	margin-top: 1%;
+	margin-bottom: 0%;
+}
+#switter2Img{
+	/*width: 80%;*/
+}
+#switterImg2{
+	float: bottom;
+}
+

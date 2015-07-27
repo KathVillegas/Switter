@@ -1,0 +1,16 @@
+<%- if @post.parent == 0 %>
+	$("#sweetsDiv").prepend("<%= j render :partial => 'posts', :locals => {:post => @post} %>")
+	$("#form_post").bind('ajax:success', function(evt, data, status, xhr) {
+	 	character = 140 - $(this).val().length
+		$(this).find(".form-control").val('');
+	 	$(this).find("#counter").text("140 characters remaining");
+	 });
+
+<%- else %>
+	$("#<%= @post.parent %>").append("<li style='list-style-type: none;' class='lists'><%= session[:username] + ':   ' +@post.message %></li>");
+	$(".form_comments").bind('ajax:success', function(evt, data, status, xhr) {
+		$(this).find(".form-control").val('');
+		$(this).find("#counter").text("140 characters remaining");
+	});
+<%- end %>
+

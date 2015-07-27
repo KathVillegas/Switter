@@ -1,0 +1,14 @@
+= form_for @user do |f|
+		
+	%div#signUpDiv
+		.form-group
+			= f.label :username
+			= f.text_field :username, class:"form-control"
+		.form-group
+			= f.label :password
+			= f.password_field :password, class:"form-control"
+		.form-group
+			= f.label :"Confirm Password"
+			= f.password_field :password_confirmation , class:"form-control"
+		.actions
+			= f.submit 'Sign Up for Switer', class:"btn btn-success", id:"changePasswordButton"

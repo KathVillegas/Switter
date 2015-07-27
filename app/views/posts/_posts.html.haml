@@ -1,0 +1,54 @@
+#postDiv
+	#usernameDiv
+		= User.where(:id => post.user_id).first().username
+	#timeDiv
+		= "Posted " + time_ago_in_words(post.created_at ,include_seconds: true) + " ago"
+	#messageDiv
+		= post.message
+	#actionDiv.row
+
+		
+	#tallies.row
+		.col-md-2
+			= Post.where(:parent => post.id).count.to_s
+			%br
+			COMMENTS
+		.col-md-2
+			= post.status.where(:status => 0).count.to_s
+			%br
+			SWEETS
+		.col-md-2
+			= post.status.where(:status => 1).count.to_s
+			%br
+			SOUR
+		.col-md-2
+		
+		.col-md-2
+			= button_to "SWEET", {:controller => "status", :action => "sweet", :comment_id => post.id}, {:class => "btn btn-info",  :remote => true}
+		.col-md-2
+			= button_to "SOUR" , {:controller => "status", :action => "sour", :comment_id => post.id}, {:class => "btn btn-success",  :remote => true}
+		
+	
+	#addCommentDiv
+		#commentsDiv
+			%ul{:id => post.id}
+				-@posts.each do |comment|
+					-if comment.parent == post.id
+						%li{:style => "list-style-type: none", :class=>"lists"}= User.where(:id => comment.user_id).first().username + ':   ' + comment.message
+
+
+		= form_for @post, :html => { :class => 'form_comments'}, :remote => true do |f|
+			.form-group
+				= f.text_area :message, class:"form-control", placeholder: "Enter your comment here"
+			#counter
+				140 characters remaining
+			#buttonSubmit
+				.actions
+					= f.submit 'Sweet!', class:"btn btn-warning submitButton"
+			.field
+				=f.hidden_field :parent, :value => post.id
+			
+			
+
+
+
